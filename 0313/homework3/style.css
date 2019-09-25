@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    font-family: Microsoft JhengHei, Heiti TC, WenQuanYi Zen Hei, LiHei Pro, DFKai-sb, monospace;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the header */
+
+header {
+    text-align: center;
+    color: black;
+    padding: 20px 0 20px 0;
+}
+
+header h2 {
+    padding: 20px 0 20px 0;
+    font-size: 35px;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+/* Create two columns/boxes that floats next to each other */
+
+nav {
+    width: 200px;
+}
+
+/* Style the list inside the menu */
+
+.main {
+    border-top: 1px solid #ddd;
+    height: calc(100% - 178px);
+    display: flex
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    border-right: 1px solid #ddd;
+}
+
+li {
+    padding: 0 20px 0 30px;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding-left: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+li+li {
+    padding-top: 10px;
+}
+
+li:hover {
+    background-color: #dddddd;
+}
+
+li.active a {
+    background-color: #cccccc;
+}
+
+article {
+    width: calc(100% - 200px);
+    height: 100%;
+    padding: 10px 0 20px 30px;
+    background-color: #e0f3fa;
+}
+
+img {
+    max-width: 300px;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.album {
+    display: flex
+}
+
+.photo{
+    border: 1px solid #ddd;
+}
+.photo+.photo {
+    margin-top: 8px
+}
+
+.photo a div{
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+/* Style the footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+    height: 70px;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+
+@media (max-width: 400px) {
+    .main {
+        display: block;
+    }
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
